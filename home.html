@@ -1,5 +1,59 @@
-<div>
-      <h1>Chào mừng bạn đến với website của tôi!</h1>
-      <h1>API Key của bạn là: {process.env.HOST_API}</h1>
+<div class="scrollable">
+	<div class="scrollable-content">
+		<div class="list-group text-center">
+			<!-- reload web sau 30" -->
+			<meta http-equiv="refresh" content="30"/>
+			<!-- cục giới thiệu -->
+			<div class="list-group-item list-group-item-home">
+				<h1>Socket Client Webapp <small>1.0</small>
+				</h1>
+			</div>
+
+			<!-- Cục trạng thái ESP8266 -->
+			<div class="list-group-item list-group-item-home">
+				<div>
+					<i class="fa fa-gamepad feature-icon text-primary"></i>
+				</div>
+				<div>
+					<h3 class="home-heading">Trạng Thái ESP8266</h3>
+					Trạng thái ESP8266: {{TrangThai}}
+				</div>
+			</div>
+
+			<!-- Cục thay đổi trạng thái Đèn -->
+			<div class="list-group-item list-group-item-home">
+				<div>
+					<i class="fa fa-tachometer feature-icon  text-primary"></i>
+				</div>
+				<div>
+					<h3 class="home-heading">TRẠNG THÁI ĐÈN</h3>
+						Trạng thái đèn: {{Den}}
+				</div>
+			</div>
+
+			<!-- Cục cập nhập giá trị công tắc -->
+			<style>
+				.bat{width: 100px;height: 40px;font-size: 14px;color: #FFF;background-color: #4caf50;border-radius: 10px;}
+        .tat{width: 100px;height: 40px;font-size: 14px;color: #FFF;background-color: #F44336;border-radius: 10px;}
+			</style>
+			<div class="list-group-item list-group-item-home">
+				<div>
+					<i class="fa fa-tachometer feature-icon  text-primary"></i>
+				</div>
+				<div>
+					<h3 class="home-heading">Công Tắc Đèn</h3>
+					<button class="bat" ng-click="BatDen()">
+						Bật Đèn
+					<button class="tat" ng-click="TatDen()">
+						Tắt Đèn
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
 </div>
+
+
   
